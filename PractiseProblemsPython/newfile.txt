@@ -1,0 +1,26 @@
+1'''
+2Created on Sep 30, 2019
+3
+4@author: Anonymous
+5'''
+6#PF-Prac-13
+7def close_number(num1,num2,num3):
+8    #start writing your code here
+9    list=[]
+10    list.append(num1-num2)
+11    list.append(num1-num3)
+12    list.append(num2-num3)
+13    list.append(num2-num1)
+14    list.append(num3-num1)
+15    list.append(num3-num2)
+16    list.sort()
+17    list.reverse()
+18    cou=0
+19    for i in list:
+20        if abs(i)==1 or i==0:
+21            cou=cou+1
+22    if(cou==2):
+23        return True
+24    return False
+25    
+26print(close_number(5,4,2))
